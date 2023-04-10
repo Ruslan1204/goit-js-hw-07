@@ -22,10 +22,13 @@ alt="${description}"
 
 ul.insertAdjacentHTML("beforeend", elements);
 
+
 function onClick(evt) {
   evt.preventDefault();
+  if(evt.target.classList.contains("gallery__image")){
     const instance = basicLightbox.create(`
-  <img src= ${evt.target.dataset.source}>
-  `);
-  console.log("instance.show() ->", instance.show());
+    <img src= ${evt.target.dataset.source}>
+    `);
+      instance.show();
+  }
 }

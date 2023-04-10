@@ -12,7 +12,7 @@ const elm = galleryItems
     <img
       class="gallery__image"
       src="${preview}"
-      alt="" title= "${description}"
+      title= "${description}"
     />
   </a>
 </li>`
@@ -21,5 +21,5 @@ const elm = galleryItems
 
 ul.insertAdjacentHTML("beforeend", elm);
 
- new SimpleLightbox(".gallery__item a", {captionPosition: 'bottom',captionDelay: 250});
+ new SimpleLightbox(".gallery__item a", {captionsData: 'title', captionPosition: 'bottom',captionDelay: 250});
 
